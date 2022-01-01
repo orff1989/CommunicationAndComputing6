@@ -7,4 +7,4 @@ def print_pkt(pkt):
 
 
 inter = ['enp0s3', 'lo']
-pkt = sniff(iface=inter, filter='tcp', prn=print_pkt)
+pkt = sniff(iface=inter, filter='src host 10.0.2.15 and dst port 23', prn=print_pkt)
